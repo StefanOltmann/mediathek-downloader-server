@@ -1,0 +1,23 @@
+[
+    {
+        "transmitter": "ZDF",
+        "topic": "Die Anstalt",
+        "title": "Die Anstalt vom"
+    },
+    {
+        "transmitter": "ZDF",
+        "topic": "heute-show",
+        "title": "heute-show vom"
+    },
+    {
+        "transmitter": "ZDF",
+        "topic": "ZDF Magazin Royale",
+        "title": "ZDF Magazin Royale vom"
+    },
+    {
+        "transmitter": "ARD",
+        "topic": "Der Elefant",
+        "title": "",
+        "minDurationInMinutes": 10
+    }
+]

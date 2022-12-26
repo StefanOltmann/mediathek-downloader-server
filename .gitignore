@@ -1,0 +1,39 @@
+# Gradle
+.gradle/
+build/
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# IntelliJ
+.idea/
+
+# NetBeans
+nb-configuration.xml
+
+# OSX
+.DS_Store
+
+# Vim
+*.swp
+*.swo
+
+# patch
+*.orig
+*.rej
+
+# Local environment
+.env
+/local.properties
+
+# Local config files
+/auth_code.txt
+/devices.json
+/influxdb.ini
+/server.log
+/server_cert.jks
+/server_cert.jks.cer
+/webhooks.json
