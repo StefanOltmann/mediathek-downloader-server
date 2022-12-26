@@ -20,7 +20,8 @@ data class Movie(
         ""
 
     fun getFileName() =
-        (getFileNameDatePrefix() + topic.replace(invalidFilenameCharactersRegex, "_").take(20) + " - " +
-                title.replace(invalidFilenameCharactersRegex, "_").take(60) + ".mp4")
+        (getFileNameDatePrefix() + topic.replace(invalidFilenameCharactersRegex, "_")
+            .take(20) + " - " +
+            title.replace(invalidFilenameCharactersRegex, "_").take(60) + ".mp4")
             .replace("  ", " ")
 }

@@ -37,9 +37,10 @@ object MovieListUtil {
             return emptyList()
         }
 
-        val movies = BufferedReader(InputStreamReader(XZInputStream(connection.inputStream))).use { reader ->
-            readMovies(reader)
-        }
+        val movies =
+            BufferedReader(InputStreamReader(XZInputStream(connection.inputStream))).use { reader ->
+                readMovies(reader)
+            }
 
         connection.disconnect()
 

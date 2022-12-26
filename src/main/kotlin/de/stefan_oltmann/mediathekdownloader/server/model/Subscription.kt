@@ -12,7 +12,7 @@ data class Subscription(
 
     fun matches(movie: Movie): Boolean =
         transmitter == movie.transmitter &&
-                topic == movie.topic &&
-                (movie.durationInMinutes == null || movie.durationInMinutes >= minDurationInMinutes) &&
-                movie.title.contains(title)
+            topic == movie.topic &&
+            (movie.durationInMinutes == null || movie.durationInMinutes >= minDurationInMinutes) &&
+            movie.title.contains(title)
 }
