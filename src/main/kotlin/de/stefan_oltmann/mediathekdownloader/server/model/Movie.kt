@@ -19,6 +19,9 @@ data class Movie(
     else
         ""
 
+    fun getFolderName() =
+        topic.replace(invalidFilenameCharactersRegex,"_")
+
     fun getFileName() =
         (getFileNameDatePrefix() + topic.replace(invalidFilenameCharactersRegex, "_")
             .take(20) + " - " +

@@ -20,6 +20,7 @@ package de.stefan_oltmann.mediathekdownloader.server
 import de.stefan_oltmann.mediathekdownloader.server.data.DownloadHistoryRepository
 import de.stefan_oltmann.mediathekdownloader.server.data.impl.FileDownloadHistoryRepository
 import de.stefan_oltmann.mediathekdownloader.server.data.impl.FileSubscriptionRepository
+import de.stefan_oltmann.mediathekdownloader.server.data.impl.SUBSCRIPTIONS_FILE_NAME
 import io.quarkus.logging.Log
 import io.quarkus.scheduler.Scheduled
 import kotlinx.coroutines.Dispatchers
@@ -45,7 +46,7 @@ class ApplicationService {
         val subscriptions = subscriptionRepository.findAll()
 
         if (subscriptions.isEmpty()) {
-            Log.info("downloadMedia() executed, but nothing to do, because subscriptions missing.")
+            Log.info("There are not subscriptions. Please create a $SUBSCRIPTIONS_FILE_NAME.")
             return
         }
 
@@ -67,7 +68,12 @@ class ApplicationService {
 
         for (movie in moviesToDownload) {
 
-            val targetFile = File(DOWNLOAD_DIR_NAME, movie.getFileName())
+            /* Each topic goes into its own subfolder */
+            val targetFolder = File(DOWNLOAD_DIR_NAME, movie.getFolderName())
+
+            targetFolder.mkdirs()
+
+            val targetFile = File(targetFolder, movie.getFileName())
 
             /* Skip existing files. */
             if (targetFile.exists())
@@ -106,7 +112,7 @@ class ApplicationService {
 
             val mbSize = targetFile.length() / 1024 / 1024
 
-            Log.info("Downloaded ${targetFile.absolutePath} of size $mbSize mb in $duration ms.")
+            Log.info("Downloaded ${targetFile.absolutePath} of size $mbSize MB in $duration ms.")
         }
     }
 }
