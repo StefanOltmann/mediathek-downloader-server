@@ -1,6 +1,6 @@
 # Stefans Mediathek Downloader Server
 
-[![CI](https://github.com/StefanOltmann/smart-home-server/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/StefanOltmann/mediathek-downloader-server/actions/workflows/ci.yml)
+[![CI](https://github.com/StefanOltmann/smart-home-server/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/StefanOltmann/mediathek-downloader-server/actions/workflows/ci.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=smart-home-server&metric=alert_status)](https://sonarcloud.io/dashboard?id=mediathek-downloader-server)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
