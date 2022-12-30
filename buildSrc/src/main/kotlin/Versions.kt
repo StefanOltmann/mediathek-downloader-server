@@ -7,7 +7,7 @@ object Versions {
     const val gitVersioning = "0.2.1"
 
     // Kotlin
-    const val kotlin = "1.7.21"
+    const val kotlin = "1.8.0"
 
     // Quarkus
     const val quarkus = "2.15.1.Final"
