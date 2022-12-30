@@ -38,8 +38,8 @@ class ApplicationService {
 
     val downloadHistoryRepository = FileDownloadHistoryRepository
 
-    // @Scheduled(cron="0 */8 * * * ?")
-    @Scheduled(every = "8h")
+    @Scheduled(cron="0 4 * * * ?")
+    // @Scheduled(every = "8h")
     @Suppress("Unused") // it's called by the Scheduler
     suspend fun downloadMedia() {
 
